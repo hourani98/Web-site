@@ -1,0 +1,365 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #3fd0d4;
+  --mainwhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.25rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.25);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+body{
+  scroll-behavior: smooth;
+}
+/*Navbar*/
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px 10px 15px;
+  background-color: var(--mainGrey);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.menu ul li {
+  margin: 0 10px;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: var(--mainBlack);
+  font-size: 20px;
+  transition: var(--mainTransition);
+}
+.menu ul li a:hover {
+  color: var(--mainGrey);
+  text-decoration: underline;
+}
+.icons i {
+  margin: 0 7px;
+  font-size: 18px;
+}
+/*ende Navbar*/
+/*Home*/
+.img img {
+  width: 100%;
+  height: calc(100vh - 10px);
+  object-fit: cover;
+}
+.content {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  color: white;
+  text-align: center;
+}
+.content h1 {
+  font-size: 80px;
+  font-size: 400;
+  margin-bottom: 20px;
+}
+.content P {
+  font-size: 25px;
+  font-size: 100;
+}
+.btn {
+  margin-top: 30px;
+  border: 1px solid var(--mainwhite);
+  padding: 8px 30px 8px 30px;
+  color: white;
+  background: none;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.btn:hover {
+  background-color: var(--primaryColor);
+}
+/*ende-home*/
+
+/*About*/
+.about {
+  padding-top: 40px;
+}
+.about-padding {
+  margin: 0 8%;
+}
+.all-about {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+}
+.titel {
+  text-align: center;
+  font-size: 30px;
+}
+.titel span {
+  color: var(--primaryColor);
+}
+.img-1 img {
+  width: 500px;
+}
+.about-content h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.about-content p {
+  line-height: 30px;
+}
+.btn-1 {
+  margin-top: 30px;
+  border: 2px solid var(--primaryColor);
+  padding: 8px 30px 8px 30px;
+  color: var(--mainwhite);
+  background-color: var(--primaryColor);
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.btn-1:hover {
+  background-color: var(--mainwhite);
+  color: var(--primaryColor);
+}
+/*Ende About*/
+/*service*/
+.services {
+  background-color: var(--mainGrey);
+}
+.service-padding {
+  padding: 40px 15px 90px 15px;
+}
+.titel-service {
+  font-size: 30px;
+  text-align: center;
+}
+.titel-service span {
+  color: var(--primaryColor);
+}
+.col {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  padding-top: 60px;
+}
+.icon-text {
+  display: flex; /
+  align-items: center; 
+}
+
+.icon-text i {
+  margin-right: 20px; 
+  background-color: var(--primaryColor);
+  padding: 15px;
+  font-size: 20px;
+}
+
+.icon-text h2,
+.icon-text p {
+  margin: 0; /* Removes default margins */
+}
+/*ende service*/
+
+/*Feat*/
+.titel-feat {
+  text-align: center;
+  margin: 40px 0 40px 0;
+  font-size: 30px;
+}
+.titel-feat span {
+  color: var(--primaryColor);
+}
+.padding-featured {
+  padding: 40px 20px 40px 20px;
+}
+.caders {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  padding: 20px;
+}
+.cader {
+  position: relative;
+  display: inline-block;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: var(--mainTransition);
+}
+.cader:hover {
+  box-shadow: var(--darkShadow);
+}
+.cader h3 {
+  margin: 10px 0px 10px 20px;
+}
+.cader span {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.cader img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+
+  color: var(--mainBlack);
+  font-size: 15px;
+  background-color: var(--primaryColor);
+  padding: 10px;
+}
+.button-container {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  margin: 30px 0 30px 0; /* Optional spacing above the button */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--mainwhite);
+  background-color: var(--primaryColor);
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--mainwhite);
+  color: var(--mainBlack);
+  border: 1px solid var(--primaryColor);
+}
+/*ende*/
+/*Gallery*/
+.gallery {
+  background-color: var(--darkGrey);
+}
+.titel-gallery {
+  text-align: center;
+  padding: 40px 0 40px 0;
+  font-size: 30px;
+}
+.titel-gallery span {
+  color: var(--primaryColor);
+}
+.gallery-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+  gap: 0;
+}
+.image {
+  position: relative;
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.content-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primaryColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: var(--mainTransition);
+}
+.content-img:hover {
+  opacity: 1;
+}
+.content-img i {
+  font-size: 40px;
+  color: var(--offWhite);
+}
+/*Gellery Ende*/
+/*Deals*/
+.deals-padding{
+  padding: 50px;
+  margin-bottom: 80px;
+  height: 200px;
+  text-align: center;
+}
+.deals-titel h1 {
+font-size: 50px;
+padding: 20px 0 40px 0;
+}
+.deals-titel span{
+  color: var(--primaryColor);
+}
+.form{
+  border: 1px solid var(--primaryColor);
+ 
+  width: 500px;
+  position: relative;
+  left: 30%;
+  display: flex;
+  
+}
+.form input[type="search"]{
+  width: 80%;
+  padding: 8px;
+  border: none;
+}
+.form input[type="submit"]{
+  width: 20%;
+  padding: 8px;
+  border: 0.5px solid var(--primaryColor);
+  cursor: pointer;
+}
+/*Deals*/
+/*Footer*/
+footer{
+  background-color: var(--mainBlack);
+  padding: 50px;
+  text-align: center;
+}
+.link ul{
+  display: flex;
+ justify-content: center;
+ list-style-type: none;
+}
+.link ul li{
+  margin: 0 10px 20px 0;
+}
+.link ul li a{
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--mainGrey);
+}
+.link ul li a:hover{
+  text-decoration: underline;
+}
+.icon-1{
+  margin: 10px 0 20px 0;
+  
+}
+.icon-1 i{
+  font-size: 30px;
+  cursor: pointer;
+}
+p{
+  color: var(--mainGrey);
+}
